@@ -4,7 +4,6 @@ var copy = 0;
 
 // console.log(heart);
 
-
 var heartSpan = document.querySelector(".circle-bg h1 span");
 var coinSpan = document.querySelectorAll(".circle-bg h1")[1];
 var copySpan = document.querySelector(".circle-bg1");
@@ -22,7 +21,6 @@ for (var i = 0; i < cards.length; i++) {
 
   var serviceName = card.querySelector(".hind-font").innerText;
   var serviceNumber = card.querySelector(".poppins-font").innerText;
-
 // console.log()
 
   heartIcon.addEventListener("click", function (e) {
