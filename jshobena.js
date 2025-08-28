@@ -1,57 +1,68 @@
-let heart = 0;
-let coin = 100;
-let copy = 0;
+var heart = 0;
+var coin = 100;
+var copy = 0;
 
-const heartSpan = document.querySelector(".circle-bg h1 span");
-const coinSpan = document.querySelectorAll(".circle-bg h1")[1];
-const copySpan = document.querySelector(".circle-bg1");
-const historyContainer = document.querySelector(".call-history div:last-child");
-const cleanBtn = document.querySelector(".call-history-btn");
+// console.log(heart);
 
-document.querySelectorAll(".card").forEach((card) => {
-  const heartIcon = card.querySelector(".fa-heart");
-  const copyBtn = card.querySelector(".button-container button:first-child");
-  const callBtn = card.querySelector(".button-container button:last-child");
 
-  const serviceName = card.querySelector(".hind-font").innerText;
-  const serviceNumber = card.querySelector(".poppins-font").innerText;
+var heartSpan = document.querySelector(".circle-bg h1 span");
+var coinSpan = document.querySelectorAll(".circle-bg h1")[1];
+var copySpan = document.querySelector(".circle-bg1");
+var historyContainer = document.querySelector(".call-history div:last-child");
+var cleanBtn = document.querySelector(".call-history-btn");
 
-  heartIcon.addEventListener("click", () => {
-    heart++;
+var cards = document.querySelectorAll(".card");
+
+// console.log()
+for (var i = 0; i < cards.length; i++) {
+  var card = cards[i];
+  var heartIcon = card.querySelector(".fa-heart");
+  var copyBtn = card.querySelector(".button-container button:first-child");
+  var callBtn = card.querySelector(".button-container button:last-child");
+
+  var serviceName = card.querySelector(".hind-font").innerText;
+  var serviceNumber = card.querySelector(".poppins-font").innerText;
+
+// console.log()
+
+  heartIcon.addEventListener("click", function (e) {
+    heart = heart + 1;
     heartSpan.innerText = heart;
-    heartIcon.style.color = "red";
+    e.target.style.color = "red";
   });
 
-  copyBtn.addEventListener("click", () => {
-    const hotline = card.querySelector(".poppins-font").innerText;
-    navigator.clipboard.writeText(hotline).then(() => {
-      copy++;
-      copySpan.innerHTML = `${copy} <span>Copy</span>`;
-      alert(`${hotline} কপি হয়েছে!`);
+
+  copyBtn.addEventListener("click", function (e) {
+    var hotline = e.target.parentElement.parentElement.querySelector(".poppins-font").innerText;
+    navigator.clipboard.writeText(hotline).then(function () {
+      copy = copy + 1;
+      copySpan.innerHTML = copy + " <span>Copy</span>";
+      alert(hotline + " কপি হয়েছে!");
     });
   });
 
-  callBtn.addEventListener("click", () => {
-    const hotline = card.querySelector(".poppins-font").innerText;
-    const service = card.querySelector(".hind-font").innerText;
+  callBtn.addEventListener("click", function (e) {
+    var cardDiv = e.target.parentElement.parentElement;
+    var hotline = cardDiv.querySelector(".poppins-font").innerText;
+    var service = cardDiv.querySelector(".hind-font").innerText;
 
     if (coin < 20) {
       alert("কল করার জন্য পর্যাপ্ত কয়েন নেই!");
       return;
     }
-    coin -= 20;
+    coin = coin - 20;
     coinSpan.innerText = coin;
 
-    alert(`${service} (${hotline}) কে কল করা হচ্ছে...`);
+    alert(service + " (" + hotline + ") কে কল করা হচ্ছে...");
 
-    const time = new Date().toLocaleTimeString();
-    const historyItem = document.createElement("p");
-    historyItem.innerText = `${service} (${hotline}) - ${time}`;
+    var time = new Date().toLocaleTimeString();
+    var historyItem = document.createElement("p");
+    historyItem.innerText = service + " (" + hotline + ") - " + time;
     historyContainer.appendChild(historyItem);
   });
-});
+}
 
-cleanBtn.addEventListener("click", () => {
+cleanBtn.addEventListener("click", function () {
   historyContainer.innerHTML = "";
   alert("কল হিস্ট্রি ক্লিয়ার করা হয়েছে");
 });
