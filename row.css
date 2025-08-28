@@ -202,3 +202,50 @@ header {
   /* line-height: 40px; */
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  #olpo {
+    text-align: center;
+    font-size: 12px !important;
+  }
+  #joruri {
+    font-size: 32px !important;
+  }
+  #display-flex-hobe {
+    margin-left: 60px;
+  }
+  #main0 {
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: 25px !important;
+  }
+  #header-name {
+    width: 45px !important;
+    height: auto !important;
+    margin-bottom: 55px !important;
+  }
+  .right-side {
+    display: none;
+  }
+  #logo-dark {
+    width: 110px !important;
+    height: auto;
+  }
+  .card {
+    width: 300px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin: 15px !important;
+    justify-items: center;
+  }
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .call-history {
+    width: 85%;
+    margin: 20px auto 0 auto;
+  }
+}
