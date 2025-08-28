@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+body {
+  margin: 0px;
+  background-color: #eafff0;
+}
+.flex-hobe-1 {
+  display: flex;
+  align-items: center;
+}
+
+.flex-hobe-2 {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  justify-content: space-between;
+}
+
+header {
+  background-color: white;
+}
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 24px;
+  margin-left: 52%;
+}
+
+.circle-bg {
+  display: inline-block;
+  background-color: #eafff0;
+  margin-top: 1px;
+  padding: 5px;
+  padding-top: 10px;
+  width: 123px;
+  height: 52px;
+  font-size: 15px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.heart-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 0px;
+}
+
+.circle-bg1 {
+  display: inline-block;
+  background-color: #00a63e;
+  margin-top: 1px;
+  padding: 5px;
+  padding-top: 10px;
+  width: 123px;
+  height: 52px;
+  color: white;
+  font-size: 20px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.middle-1 {
+  background: linear-gradient(to right, #014d3b, #1a7d64, #014d3b);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 120px 30px; */
+  /* margin-top: 24px; */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+.card p {
+  font-size: 18px;
+  color: gray;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 500;
+}
+
+.card button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* .card button:first-child {
+  background: #f1f1f1;
+
+  padding: 15px 120px;
+}
+
+.card button:last-child {
+  background: #00a63e;
+  color: white;
+  font-size: 17px;
+  padding: 15px 120px;
+} */
+.hind-font {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.poppins-font {
+  font-family: "Poppins", sans-serif;
+}
+
+.border-hobe1 {
+  display: inline-block;
+  color: #979797;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #f2f2f2;
+}
+/* .border-hobe1 p {
+  font-family: "Hind Siliguri", sans-serif;
+} */
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+.button-container button {
+  flex: 1;
+  padding: 18px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+.button-container button:first-child {
+  background-color: #f1f1f1;
+  color: black;
+}
+.button-container button:last-child {
+  background-color: #00a63e;
+  color: white;
+}
+
+/* .main-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+} */
